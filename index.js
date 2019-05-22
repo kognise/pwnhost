@@ -4,10 +4,9 @@ const bodyParser = require('body-parser')
 const app = express()
 app.use(bodyParser.json())
 
-app.post('/callback', (req, res) => {
-  console.log('Callback')
-  console.log(req.body)
-  res.send('Callback here')
+app.get('/setup', (req, res) => {
+  console.log('Setup')
+  res.send('Setup here')
 })
 
 app.post('/hook', (req, res) => {
